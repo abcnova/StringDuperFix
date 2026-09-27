@@ -7,6 +7,26 @@
     <artifactId>string-duper-fix</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
+    <name>String Duper Fix</name>
+    <description>Restores controlled, vanilla-style tripwire string farms on Paper and compatible forks.</description>
+    <url>https://github.com/abcnova/StringDuperFix</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/mit</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>ABC_Nova</name>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/abcnova/StringDuperFix.git</connection>
+        <developerConnection>scm:git:https://github.com/abcnova/StringDuperFix.git</developerConnection>
+        <url>https://github.com/abcnova/StringDuperFix</url>
+    </scm>
     <properties>
         <maven.compiler.release>21</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

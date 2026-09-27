@@ -84,3 +84,7 @@ compatibility test, not a simulated-player TPS/MSPT benchmark; no unmeasured
 
 String Duper Fix sends no analytics or server information. It performs no HTTP,
 DNS, database, or other network access.
+
+## License
+
+String Duper Fix is available under the [MIT License](LICENSE).
