@@ -3,6 +3,7 @@ version: 1.0.0
 main: de.abc_nova.stringduperfix.StringDuperFixPlugin
 api-version: '1.21'
 author: ABC_Nova
+website: https://github.com/abcnova/StringDuperFix
 description: Restores controlled, event-driven string dupers on Paper and compatible forks from 1.21.11 through 26.3.
 commands:
   stringduper:

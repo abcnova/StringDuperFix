@@ -26,4 +26,6 @@ Permission: `stringduper.admin` (OP by default).
 The same JAR supports Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3 and was
 boot-tested against every listed official Paper server line.
 
+Open source under the MIT License.
+
 [Source code, checksums, and releases](https://github.com/abcnova/StringDuperFix)

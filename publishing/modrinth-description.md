@@ -38,4 +38,8 @@ Some Paper/Leaf unsupported-mechanics settings require one additional full serve
 
 String Duper Fix contains no telemetry and performs no network requests.
 
+## License
+
+Open source under the MIT License.
+
 [Source code, checksums, and releases](https://github.com/abcnova/StringDuperFix)
