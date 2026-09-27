@@ -20,4 +20,4 @@ Permission: [CODE]stringduper.admin[/CODE] (OP by default)
 [SIZE=5][B]Compatibility[/B][/SIZE]
 One JAR supports Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3. It was boot-tested on every listed official Paper line. Java 21 or newer is required for 1.21.11; the 26.x server lines require Java 25 or newer.
 
-[URL='https://github.com/abcnova/string-duper-fix']Source code, checksums, and releases[/URL]
+[URL='https://github.com/abcnova/StringDuperFix']Source code, checksums, and releases[/URL]

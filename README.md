@@ -5,7 +5,7 @@ Paper and compatible forks from 1.21.11 through 26.3. It is server-side,
 dependency-free, and event-driven:
 there is no permanent world or chunk scan.
 
-[Source code and releases](https://github.com/abcnova/string-duper-fix)
+[Source code and releases](https://github.com/abcnova/StringDuperFix)
 
 ## Highlights
 

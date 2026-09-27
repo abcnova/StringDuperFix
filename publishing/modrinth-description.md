@@ -38,4 +38,4 @@ Some Paper/Leaf unsupported-mechanics settings require one additional full serve
 
 String Duper Fix contains no telemetry and performs no network requests.
 
-[Source code, checksums, and releases](https://github.com/abcnova/string-duper-fix)
+[Source code, checksums, and releases](https://github.com/abcnova/StringDuperFix)
