@@ -1,0 +1,26 @@
+# String Duper Fix - Sounds ------------------------------------------
+# /stringduper sounds on|off stores the enabled state persistently.
+# Sound names use stable vanilla namespaced keys without the minecraft: prefix.
+# -------------------------------------------------------------------
+
+enabled: true
+
+cycle:
+  off:
+    name: block.tripwire.click_off
+    volume: 0.62
+    pitch: 0.72
+  on:
+    name: block.tripwire.click_on
+    volume: 0.56
+    pitch: 0.82
+
+command:
+  success:
+    name: ui.button.click
+    volume: 0.65
+    pitch: 1.45
+  error:
+    name: block.note_block.bass
+    volume: 0.65
+    pitch: 0.70

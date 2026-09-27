@@ -1,0 +1,16 @@
+name: StringDuperFix
+version: 1.0.0
+main: de.abc_nova.stringduperfix.StringDuperFixPlugin
+api-version: '1.21'
+author: ABC_Nova
+description: Restores controlled, event-driven string dupers on Paper and compatible forks from 1.21.11 through 26.3.
+commands:
+  stringduper:
+    description: Manages String Duper Fix, its sounds, and live configuration.
+    aliases: [tripwirerevival, twrevival]
+    usage: '/stringduper <on|off|status|sounds|reload> [on|off|status]'
+    permission: stringduper.admin
+permissions:
+  stringduper.admin:
+    description: Allows administrators to manage String Duper Fix.
+    default: op

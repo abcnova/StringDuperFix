@@ -1,0 +1,6 @@
+/target/
+/assets/tripwire-revival-icon.png
+/.idea/
+/.vscode/
+*.iml
+AGENTS.md

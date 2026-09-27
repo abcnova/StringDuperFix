@@ -1,0 +1,23 @@
+[CENTER][SIZE=6][B]String Duper Fix[/B][/SIZE]
+Controlled, server-side tripwire string-farm compatibility for modern Paper and compatible forks.[/CENTER]
+
+[SIZE=5][B]Highlights[/B][/SIZE]
+[LIST]
+[*]Restores shears-based tripwire disarming and supported hook-to-hook string farms
+[*]Supports pistonless, lever-controlled builds
+[*]Event-driven and bounded: no permanent world or chunk scan
+[*]English by default, with automatic German, French, and Spanish player messages
+[*]Live enable/disable, sound controls, and safe reload commands
+[*]No telemetry, network requests, NMS, reflection, or dependencies
+[/LIST]
+
+[SIZE=5][B]Commands[/B][/SIZE]
+[CODE]/stringduper on|off|status
+/stringduper sounds [on|off|status]
+/stringduper reload[/CODE]
+Permission: [CODE]stringduper.admin[/CODE] (OP by default)
+
+[SIZE=5][B]Compatibility[/B][/SIZE]
+One JAR supports Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3. It was boot-tested on every listed official Paper line. Java 21 or newer is required for 1.21.11; the 26.x server lines require Java 25 or newer.
+
+[URL='https://github.com/abcnova/string-duper-fix']Source code, checksums, and releases[/URL]

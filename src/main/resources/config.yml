@@ -1,0 +1,49 @@
+# String Duper Fix ----------------------------------------------------
+# Purpose: controlled, vanilla-style tripwire compatibility for Paper and Leaf.
+# Keep the YAML indentation intact. Invalid or out-of-range values are clamped
+# to safe runtime limits and reported in the server log.
+# ----------------------------------------------------------------------
+
+# =============================================================
+# Vanilla mechanics compatibility
+# Changes to server-level options require a complete server restart.
+# =============================================================
+
+config-version: 6
+
+# Optional Paper attribute-swap compatibility. This is unrelated to string farms
+# and therefore remains disabled by default.
+attribute-swap:
+  enabled: false
+
+# Restores supported tripwire/string-farm behavior and shears-based disarming.
+# Other duplication mechanics remain untouched.
+string-duper:
+  enabled: true
+  # Event-driven fallback for farms whose tripwire is removed by water or a
+  # neighboring update. Only previously validated hook-to-hook lines are restored.
+  compatibility-fallback:
+    enabled: true
+    # Search bounds used only around a relevant interaction or block event.
+    activation-scan-radius: 8
+    maximum-line-length: 40
+    check-delay-ticks: 1
+    # Bounded observation window for delayed water and neighbor updates.
+    check-window-ticks: 10
+    # Prevents multiple events from producing duplicate output in the same tick.
+    activation-cooldown-ticks: 1
+    native-drop-detection-radius: 3.0
+    # Output per removed tripwire block; total output is capped to one stack.
+    string-per-broken-wire: 1
+    # Optional continuous pistonless mode. One shared task exists only while a
+    # valid, disarmed farm has an active lever and stops immediately afterward.
+    continuous-powered-output:
+      enabled: true
+      # The common pistonless design runs while its lever is OFF. Set this to
+      # true for inverted builds that should run while the lever is ON.
+      active-when-lever-powered: false
+      start-delay-ticks: 2
+      interval-ticks: 6
+      string-per-cycle: 1
+      # Output sounds are configured separately in sounds.yml.
+

@@ -1,0 +1,35 @@
+<h1>String Duper Fix</h1>
+<p>Bring classic tripwire string farms back to modern Paper and Leaf servers—without permanent world scans, telemetry, or client mods.</p>
+
+<h2>Features</h2>
+<ul>
+  <li>Restores shears-based tripwire disarming.</li>
+  <li>Supports controlled hook-to-hook string farms, including pistonless lever builds.</li>
+  <li>Uses bounded, event-driven checks instead of continuously scanning worlds or chunks.</li>
+  <li>Caches the nearest hopper and creates one stacked item entity per output cycle.</li>
+  <li>Stops its shared active-farm task immediately when no valid farm remains.</li>
+  <li>Uses English, German, French, or Spanish based on each player's Minecraft language.</li>
+</ul>
+
+<h2>Commands</h2>
+<ul>
+  <li><code>/stringduper on|off|status</code></li>
+  <li><code>/stringduper sounds</code></li>
+  <li><code>/stringduper sounds on|off|status</code></li>
+  <li><code>/stringduper reload</code></li>
+</ul>
+<p>Permission: <code>stringduper.admin</code> (OP by default). Legacy aliases <code>/tripwirerevival</code> and <code>/twrevival</code> are included.</p>
+
+<h2>Compatibility</h2>
+<ul>
+  <li>One JAR for Minecraft/Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3</li>
+  <li>Compatible Paper forks such as Leaf where they preserve the public Paper API</li>
+  <li>Java 21 or newer on 1.21.11; Java 25 or newer on 26.x</li>
+  <li>Server-side only; no dependencies</li>
+</ul>
+
+<p>Every listed Paper line was boot-tested with its official server JAR. Paper does not publish a separate 26.1 server line. Builds 26.1.1 and 26.3 were alpha at release time.</p>
+
+<p>Some Paper/Leaf unsupported-mechanics settings require one additional full server restart after the first installation. String Duper Fix contains no telemetry and performs no network requests.</p>
+<p><a href="https://github.com/abcnova/string-duper-fix">Source code, checksums, and releases</a></p>
+<p>The source-code link will be added after the public repository is finalized.</p>

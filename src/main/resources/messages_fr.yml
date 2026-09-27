@@ -1,0 +1,16 @@
+# String Duper Fix - Français ----------------------------------------
+# Les messages destinés aux joueurs utilisent le format MiniMessage.
+
+prefix: '<gradient:#00D4FF:#0066FF><bold>String Duper Fix</bold></gradient> <dark_gray>»</dark_gray>'
+no-permission: '{prefix} <red>Vous n’avez pas la permission d’effectuer cette action.</red>'
+usage: '{prefix} <gray>Utilisation :</gray> <white>/stringduper <on|off|status|sounds|reload> [on|off|status]</white>'
+enabled: '{prefix} <green>Le dupeur de ficelle est maintenant activé.</green>'
+disabled: '{prefix} <yellow>Le dupeur de ficelle est maintenant désactivé.</yellow>'
+status-on: '{prefix} <gray>Dupeur de ficelle :</gray> <green>activé</green>'
+status-off: '{prefix} <gray>Dupeur de ficelle :</gray> <red>désactivé</red>'
+sounds-enabled: '{prefix} <green>Les sons des fermes à ficelle sont maintenant activés.</green>'
+sounds-disabled: '{prefix} <yellow>Les sons des fermes à ficelle sont maintenant désactivés.</yellow>'
+sounds-status-on: '{prefix} <gray>Sons des fermes à ficelle :</gray> <green>activés</green>'
+sounds-status-off: '{prefix} <gray>Sons des fermes à ficelle :</gray> <red>désactivés</red>'
+reload-success: '{prefix} <green>La configuration, les langues et les sons ont été rechargés.</green>'
+reload-failed: '{prefix} <red>Le rechargement a échoué. Consultez la console ; les anciens réglages restent actifs.</red>'
