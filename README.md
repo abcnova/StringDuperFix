@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/StringDuper.png" width="180" height="180" alt="String Duper Fix icon">
+</p>
+
 # String Duper Fix
 
 String Duper Fix restores controlled, vanilla-style tripwire string farms on
