@@ -1,7 +1,8 @@
 # String Duper Fix
 
-String Duper Fix restores controlled, vanilla-style tripwire string farms on
-modern Paper servers without permanent world scans, telemetry, or client mods.
+**String Duper Fix** restores classic tripwire string farms on modern Paper servers with bounded, event-driven checks. It runs entirely on the server; players do not need a client mod.
+
+[Source code](https://github.com/abcnova/StringDuperFix) · [Releases](https://github.com/abcnova/StringDuperFix/releases) · [Report an issue](https://github.com/abcnova/StringDuperFix/issues)
 
 ## Highlights
 
@@ -17,15 +18,17 @@ modern Paper servers without permanent world scans, telemetry, or client mods.
 
 ```text
 /stringduper on|off|status
-/stringduper sounds [on|off|status]
+/stringduper sounds [on|off]
+/stringduper sounds status
 /stringduper reload
 ```
 
-Permission: `stringduper.admin` (OP by default).
+Personal sound on/off commands are available to every player. Mechanic controls,
+reload, and both status commands require `stringduper.admin` (OP by default).
 
-The same JAR supports Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3 and was
-boot-tested against every listed official Paper server line.
+The same JAR supports every published Paper release from 1.21.3 through 26.3
+and was boot-tested against every listed official Paper server line. Mojang
+fixed native tripwire string duplication in Java 1.21.2; Paper's first release
+after that fix is 1.21.3.
 
 Open source under the MIT License.
-
-[Source code, checksums, and releases](https://github.com/abcnova/StringDuperFix)

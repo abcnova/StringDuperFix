@@ -1,5 +1,6 @@
 <h1>String Duper Fix</h1>
-<p>Bring classic tripwire string farms back to modern Paper and Leaf servers—without permanent world scans, telemetry, or client mods.</p>
+<p><strong>String Duper Fix</strong> restores classic tripwire string farms on modern Paper servers with bounded, event-driven checks. It runs entirely on the server; players do not need a client mod.</p>
+<p><a href="https://github.com/abcnova/StringDuperFix">Source code</a> &middot; <a href="https://github.com/abcnova/StringDuperFix/releases">Releases</a> &middot; <a href="https://github.com/abcnova/StringDuperFix/issues">Report an issue</a></p>
 
 <h2>Features</h2>
 <ul>
@@ -14,22 +15,22 @@
 <h2>Commands</h2>
 <ul>
   <li><code>/stringduper on|off|status</code></li>
-  <li><code>/stringduper sounds</code></li>
-  <li><code>/stringduper sounds on|off|status</code></li>
+  <li><code>/stringduper sounds</code> — toggle sounds for yourself</li>
+  <li><code>/stringduper sounds on|off</code> — set your persistent personal preference</li>
+  <li><code>/stringduper sounds status</code> — inspect your sound status (admin/OP only)</li>
   <li><code>/stringduper reload</code></li>
 </ul>
-<p>Permission: <code>stringduper.admin</code> (OP by default). Legacy aliases <code>/tripwirerevival</code> and <code>/twrevival</code> are included.</p>
+<p>Personal sound on/off commands are available to every player. Mechanic controls, reload, and both status commands require <code>stringduper.admin</code> (OP by default). Legacy aliases <code>/tripwirerevival</code> and <code>/twrevival</code> are included.</p>
 
 <h2>Compatibility</h2>
 <ul>
-  <li>One JAR for Minecraft/Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3</li>
+  <li>One JAR for every published Paper release from 1.21.3 through 26.3</li>
   <li>Compatible Paper forks such as Leaf where they preserve the public Paper API</li>
-  <li>Java 21 or newer on 1.21.11; Java 25 or newer on 26.x</li>
+  <li>Java 21 or newer on 1.21.3–1.21.11; Java 25 or newer on 26.x</li>
   <li>Server-side only; no dependencies</li>
 </ul>
 
-<p>Every listed Paper line was boot-tested with its official server JAR. Paper does not publish a separate 26.1 server line. Builds 26.1.1 and 26.3 were alpha at release time.</p>
+<p>Mojang fixed native tripwire string duplication in Java 1.21.2. Paper did not publish 1.21.2, so support starts with Paper 1.21.3. Every listed Paper release was boot-tested with its official server JAR. Paper does not publish a separate 26.1 server line.</p>
 
 <p>Some Paper/Leaf unsupported-mechanics settings require one additional full server restart after the first installation. String Duper Fix contains no telemetry and performs no network requests.</p>
 <p>Open source under the MIT License.</p>
-<p><a href="https://github.com/abcnova/StringDuperFix">Source code, checksums, and releases</a></p>

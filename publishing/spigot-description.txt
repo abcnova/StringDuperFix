@@ -1,5 +1,7 @@
 [CENTER][SIZE=6][B]String Duper Fix[/B][/SIZE]
-Controlled, server-side tripwire string-farm compatibility for modern Paper and compatible forks.[/CENTER]
+Classic tripwire string farms on modern Paper, restored with bounded, event-driven checks. Server-side only; no client mod required.[/CENTER]
+
+[URL='https://github.com/abcnova/StringDuperFix']Source code[/URL] · [URL='https://github.com/abcnova/StringDuperFix/releases']Releases[/URL] · [URL='https://github.com/abcnova/StringDuperFix/issues']Report an issue[/URL]
 
 [SIZE=5][B]Highlights[/B][/SIZE]
 [LIST]
@@ -13,13 +15,12 @@ Controlled, server-side tripwire string-farm compatibility for modern Paper and 
 
 [SIZE=5][B]Commands[/B][/SIZE]
 [CODE]/stringduper on|off|status
-/stringduper sounds [on|off|status]
+/stringduper sounds [on|off]
+/stringduper sounds status
 /stringduper reload[/CODE]
-Permission: [CODE]stringduper.admin[/CODE] (OP by default)
+Personal sound on/off commands are available to every player. Mechanic controls, reload, and both status commands require [CODE]stringduper.admin[/CODE] (OP by default).
 
 [SIZE=5][B]Compatibility[/B][/SIZE]
-One JAR supports Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3. It was boot-tested on every listed official Paper line. Java 21 or newer is required for 1.21.11; the 26.x server lines require Java 25 or newer.
+One JAR supports every published Paper release from 1.21.3 through 26.3. It was boot-tested on every listed official Paper line. Mojang fixed native tripwire string duplication in Java 1.21.2; Paper's first release after that fix is 1.21.3. Java 21 or newer is required for 1.21.3–1.21.11; the 26.x server lines require Java 25 or newer.
 
 Open source under the MIT License.
-
-[URL='https://github.com/abcnova/StringDuperFix']Source code, checksums, and releases[/URL]

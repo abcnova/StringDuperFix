@@ -1,6 +1,8 @@
 # String Duper Fix
 
-Bring classic tripwire string farms back to modern Paper and Leaf servers—without permanent world scans, telemetry, or client mods.
+**String Duper Fix** restores classic tripwire string farms on modern Paper servers with bounded, event-driven checks. It runs entirely on the server; players do not need a client mod.
+
+[Source code](https://github.com/abcnova/StringDuperFix) · [Releases](https://github.com/abcnova/StringDuperFix/releases) · [Report an issue](https://github.com/abcnova/StringDuperFix/issues)
 
 ## What it does
 
@@ -14,23 +16,24 @@ Bring classic tripwire string farms back to modern Paper and Leaf servers—with
 ## Administration
 
 - `/stringduper on|off|status`
-- `/stringduper sounds`
-- `/stringduper sounds on|off|status`
+- `/stringduper sounds` — toggle sounds for yourself
+- `/stringduper sounds on|off` — set your persistent personal preference
+- `/stringduper sounds status` — inspect your sound status (admin/OP only)
 - `/stringduper reload`
 
-Permission: `stringduper.admin` (OP by default).
+Personal sound on/off commands are available to every player. Mechanic controls, reload, and both status commands require `stringduper.admin` (OP by default).
 
 Legacy aliases `/tripwirerevival` and `/twrevival` are included.
 
 ## Compatibility
 
-- One JAR for Minecraft/Paper 1.21.11, 26.1.1, 26.1.2, 26.2, and 26.3
+- One JAR for every published Paper release from 1.21.3 through 26.3
 - Compatible Paper forks such as Leaf where they preserve the public Paper API
-- Java 21+ on 1.21.11; Java 25+ on 26.x
+- Java 21+ on 1.21.3–1.21.11; Java 25+ on 26.x
 - Server-side only
 - No dependencies
 
-Every listed Paper line was boot-tested with its official server JAR. Paper does not publish a separate 26.1 server line. Builds 26.1.1 and 26.3 were alpha at release time.
+Mojang fixed native tripwire string duplication in Java 1.21.2. Paper did not publish 1.21.2, so support starts with Paper 1.21.3. Every listed Paper release was boot-tested with its official server JAR. Paper does not publish a separate 26.1 server line.
 
 Some Paper/Leaf unsupported-mechanics settings require one additional full server restart after the first installation. Configuration files include detailed English comments and safe bounded defaults.
 
@@ -41,5 +44,3 @@ String Duper Fix contains no telemetry and performs no network requests.
 ## License
 
 Open source under the MIT License.
-
-[Source code, checksums, and releases](https://github.com/abcnova/StringDuperFix)

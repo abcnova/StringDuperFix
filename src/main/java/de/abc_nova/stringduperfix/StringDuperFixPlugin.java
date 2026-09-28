@@ -35,13 +35,14 @@ public final class StringDuperFixPlugin extends JavaPlugin implements CommandExe
       if (mechanics != null) {
          mechanics.close();
       }
-      if (sounds != null) {
-         sounds.close();
-      }
    }
 
    @Override
    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+      if (args.length >= 1 && args[0].equalsIgnoreCase("sounds")) {
+         handleSounds(sender, args);
+         return true;
+      }
       if (!sender.hasPermission("stringduper.admin")) {
          messages.send(sender, "no-permission");
          playCommandSound(sender, false);
@@ -60,29 +61,47 @@ public final class StringDuperFixPlugin extends JavaPlugin implements CommandExe
          playCommandSound(sender, true);
          return true;
       }
-      if (args.length < 1 || !args[0].equalsIgnoreCase("sounds")) {
+      if (args.length < 1) {
          messages.send(sender, "usage");
          playCommandSound(sender, false);
-         return true;
-      }
-
-      if (args.length == 1) {
-         setSounds(sender, !sounds.enabled());
-         return true;
-      }
-      String mode = args[1].toLowerCase(Locale.ROOT);
-      if (mode.equals("status")) {
-         messages.send(sender, sounds.enabled() ? "sounds-status-on" : "sounds-status-off");
-         playCommandSound(sender, true);
-         return true;
-      }
-      if (mode.equals("on") || mode.equals("off")) {
-         setSounds(sender, mode.equals("on"));
          return true;
       }
       messages.send(sender, "usage");
       playCommandSound(sender, false);
       return true;
+   }
+
+   private void handleSounds(CommandSender sender, String[] args) {
+      if (!(sender instanceof Player player)) {
+         messages.send(sender, "player-only");
+         return;
+      }
+      if (args.length == 1) {
+         setSounds(player, !sounds.enabled(player));
+         return;
+      }
+      if (args.length != 2) {
+         messages.send(sender, "usage");
+         playCommandSound(sender, false);
+         return;
+      }
+      String mode = args[1].toLowerCase(Locale.ROOT);
+      if (mode.equals("status")) {
+         if (!sender.hasPermission("stringduper.admin")) {
+            messages.send(sender, "no-permission");
+            playCommandSound(sender, false);
+            return;
+         }
+         messages.send(sender, sounds.enabled(player) ? "sounds-status-on" : "sounds-status-off");
+         playCommandSound(sender, true);
+         return;
+      }
+      if (mode.equals("on") || mode.equals("off")) {
+         setSounds(player, mode.equals("on"));
+         return;
+      }
+      messages.send(sender, "usage");
+      playCommandSound(sender, false);
    }
 
    private void reloadPlugin(CommandSender sender) {
@@ -113,27 +132,22 @@ public final class StringDuperFixPlugin extends JavaPlugin implements CommandExe
          Messages newMessages = Messages.load(this);
          VanillaMechanicsFeature newMechanics = VanillaMechanicsFeature.install(this, newSounds);
          VanillaMechanicsFeature oldMechanics = mechanics;
-         SoundPreferences oldSounds = sounds;
          mechanics = newMechanics;
          sounds = newSounds;
          messages = newMessages;
          if (oldMechanics != null) {
             oldMechanics.close();
          }
-         if (oldSounds != null) {
-            oldSounds.close();
-         }
       } catch (RuntimeException exception) {
-         newSounds.close();
          throw exception;
       }
    }
 
-   private void setSounds(CommandSender sender, boolean enabled) {
-      sounds.setEnabled(enabled);
-      messages.send(sender, enabled ? "sounds-enabled" : "sounds-disabled");
+   private void setSounds(Player player, boolean enabled) {
+      sounds.setEnabled(player, enabled);
+      messages.send(player, enabled ? "sounds-enabled" : "sounds-disabled");
       if (enabled) {
-         playCommandSound(sender, true);
+         sounds.playCommand(player, true);
       }
    }
 
@@ -156,14 +170,17 @@ public final class StringDuperFixPlugin extends JavaPlugin implements CommandExe
       String alias,
       String[] args
    ) {
-      if (!sender.hasPermission("stringduper.admin")) {
-         return List.of();
-      }
       if (args.length == 1) {
-         return prefixMatches(args[0], List.of("on", "off", "status", "sounds", "reload"));
+         List<String> options = sender.hasPermission("stringduper.admin")
+            ? List.of("on", "off", "status", "sounds", "reload")
+            : List.of("sounds");
+         return prefixMatches(args[0], options);
       }
       if (args.length == 2 && args[0].equalsIgnoreCase("sounds")) {
-         return prefixMatches(args[1], List.of("on", "off", "status"));
+         List<String> options = sender.hasPermission("stringduper.admin")
+            ? List.of("on", "off", "status")
+            : List.of("on", "off");
+         return prefixMatches(args[1], options);
       }
       return List.of();
    }

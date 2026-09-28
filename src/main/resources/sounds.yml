@@ -1,9 +1,9 @@
 # String Duper Fix - Sounds ------------------------------------------
-# /stringduper sounds on|off stores the enabled state persistently.
+# Sound definitions are shared, while each player's on/off preference is stored
+# in that player's persistent Minecraft data. Changing your preference never
+# changes what another player hears.
 # Sound names use stable vanilla namespaced keys without the minecraft: prefix.
 # -------------------------------------------------------------------
-
-enabled: true
 
 cycle:
   off:

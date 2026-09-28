@@ -5,7 +5,9 @@
 # String Duper Fix
 
 String Duper Fix restores controlled, vanilla-style tripwire string farms on
-Paper and compatible forks from 1.21.11 through 26.3. It is server-side,
+Paper and compatible forks from 1.21.3 through 26.3. Mojang fixed the native
+tripwire string duplication bug in Java 1.21.2; Paper's first release after
+that fix is 1.21.3. The plugin is server-side,
 dependency-free, and event-driven:
 there is no permanent world or chunk scan.
 
@@ -27,12 +29,14 @@ there is no permanent world or chunk scan.
 | Command | Description |
 | --- | --- |
 | `/stringduper on\|off\|status` | Enable, disable, or inspect the mechanic. |
-| `/stringduper sounds` | Toggle farm and command sounds. |
-| `/stringduper sounds on\|off\|status` | Set or inspect sound status. |
+| `/stringduper sounds` | Toggle farm and command sounds for yourself. |
+| `/stringduper sounds on\|off` | Set your own persistent sound preference. |
+| `/stringduper sounds status` | Show your sound status (admin/OP only). |
 | `/stringduper reload` | Reload configuration, languages, and sounds. |
 
-Legacy aliases `/tripwirerevival` and `/twrevival` are included. Administrative
-commands require `stringduper.admin` (OP by default).
+Legacy aliases `/tripwirerevival` and `/twrevival` are included. Personal sound
+on/off commands are available to every player. Mechanic controls, reload, and
+both status commands require `stringduper.admin` (OP by default).
 
 ## Configuration
 
@@ -52,11 +56,19 @@ on each currently published Paper line:
 
 | Minecraft / Paper | Tested build | Required server Java |
 | --- | --- | --- |
+| 1.21.3 | 83 (stable) | Java 21+ |
+| 1.21.4 | 232 (stable) | Java 21+ |
+| 1.21.5 | 114 (alpha) | Java 21+ |
+| 1.21.6 | 48 (stable) | Java 21+ |
+| 1.21.7 | 32 (stable) | Java 21+ |
+| 1.21.8 | 60 (stable) | Java 21+ |
+| 1.21.9 | 59 (alpha) | Java 21+ |
+| 1.21.10 | 130 (stable) | Java 21+ |
 | 1.21.11 | 132 (stable) | Java 21+ |
 | 26.1.1 | 29 (alpha) | Java 25+ |
 | 26.1.2 | 74 (stable) | Java 25+ |
 | 26.2 | 129 (stable) | Java 25+ |
-| 26.3 | 49 (alpha) | Java 25+ |
+| 26.3 | 133 (alpha) | Java 25+ |
 
 Paper does not publish a separate 26.1 server line. Compatible Paper forks such
 as Leaf are supported where they preserve the public Paper API; fork-specific

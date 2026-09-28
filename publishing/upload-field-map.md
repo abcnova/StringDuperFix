@@ -8,7 +8,7 @@ Use this map for the initial public listings. Do not submit a project until all 
 - **Version:** 1.0.0
 - **Slug / namespace:** `string-duper-fix` where hyphens are accepted; otherwise `StringDuperFix`
 - **Author:** ABC_Nova
-- **Summary:** Restore controlled tripwire string farms on modern Paper servers with bounded, event-driven checks.
+- **Summary:** Restore classic tripwire string farms on modern Paper with bounded, event-driven checks—no client mod required.
 - **License:** MIT
 - **Project type:** Server plugin
 - **Side:** Server-side only
@@ -18,7 +18,7 @@ Use this map for the initial public listings. Do not submit a project until all 
 - **Release:** https://github.com/abcnova/StringDuperFix/releases/tag/v1.0.0
 - **Icon:** `assets/StringDuper.png` (1254 × 1254 PNG)
 - **JAR:** `target/StringDuperFix-1.0.0.jar`
-- **JAR SHA-256:** `C4C45B98985AFE1104BC81E48BF288608191A237580DD79ACF4684B740705830`
+- **JAR SHA-256:** `81ED4639321F69FB197EA9E479630EA52743B2996F6A83FD72450D6A3D1BDC86`
 - **Release type / channel:** Release
 - **Dependencies:** None
 - **Monetization / rewards:** Leave disabled unless the owner chooses otherwise.
@@ -27,13 +27,21 @@ Use this map for the initial public listings. Do not submit a project until all 
 
 Select Paper and these Minecraft versions:
 
+- 1.21.3
+- 1.21.4
+- 1.21.5
+- 1.21.6
+- 1.21.7
+- 1.21.8
+- 1.21.9
+- 1.21.10
 - 1.21.11
 - 26.1.1
 - 26.1.2
 - 26.2
 - 26.3
 
-Do not select a standalone 26.1 entry: Paper does not publish a separate 26.1 server line. One JAR supports every version above. Java 21+ is required on 1.21.11; the 26.x server lines require Java 25+.
+Do not select 1.21.2 or a standalone 26.1 entry: Paper publishes neither server line. Mojang fixed native string duplication in 1.21.2, and Paper's first post-fix release is 1.21.3. One JAR supports every version above. Java 21+ is required on 1.21.3–1.21.11; the 26.x server lines require Java 25+.
 
 Compatible Paper forks may be described in text, but do not tag a loader/platform that was not actually tested.
 
@@ -85,4 +93,3 @@ The description already includes commands, permission, setup/compatibility, priv
 - **Platform versions:** select exactly the compatibility list above
 - **File:** `target/StringDuperFix-1.0.0.jar`
 - **Dependencies:** None
-

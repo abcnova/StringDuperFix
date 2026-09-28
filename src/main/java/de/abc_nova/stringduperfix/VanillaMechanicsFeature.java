@@ -694,7 +694,7 @@ final class VanillaMechanicsFeature implements Listener {
 
    private void playCycleSound(TripwireLine line) {
       World world = line.center().getWorld();
-      if (world == null || !sounds.enabled()) {
+      if (world == null) {
          return;
       }
       sounds.playCycleOff(world, line.firstHook());
@@ -702,7 +702,7 @@ final class VanillaMechanicsFeature implements Listener {
          plugin,
          () -> {
             World currentWorld = line.center().getWorld();
-            if (currentWorld != null && hooksRemain(line) && sounds.enabled()) {
+            if (currentWorld != null && hooksRemain(line)) {
                sounds.playCycleOn(currentWorld, line.secondHook());
             }
          },

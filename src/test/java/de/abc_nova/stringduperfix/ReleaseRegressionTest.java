@@ -49,7 +49,8 @@ final class ReleaseRegressionTest {
       assertTrue(plugin.contains("stringduper:"));
       assertTrue(plugin.contains("version: 1.0.0"));
       assertTrue(plugin.contains("author: ABC_Nova"));
-      assertTrue(main.contains("setSounds(sender, !sounds.enabled())"));
+      assertTrue(main.contains("setSounds(player, !sounds.enabled(player))"));
+      assertTrue(main.contains("sender.hasPermission(\"stringduper.admin\")"));
       assertTrue(main.contains("setMechanics(sender"));
       assertTrue(main.contains("List.of(\"on\", \"off\", \"status\")"));
       assertTrue(messages.contains("sounds-enabled:"));
@@ -84,6 +85,10 @@ final class ReleaseRegressionTest {
       assertTrue(messages.contains("messages_fr.yml"));
       assertTrue(messages.contains("messages_es.yml"));
       assertTrue(messages.contains("FALLBACK_LANGUAGE = \"en\""));
+      String soundPreferences = read("src/main/java/de/abc_nova/stringduperfix/SoundPreferences.java");
+      assertTrue(soundPreferences.contains("PersistentDataType.BYTE"));
+      assertTrue(soundPreferences.contains("player.playSound"));
+      assertFalse(soundPreferences.contains("world.playSound"));
       assertTrue(read("src/main/resources/messages_en.yml").contains("usage:"));
       assertTrue(read("src/main/resources/messages_fr.yml").contains("usage:"));
       assertTrue(read("src/main/resources/messages_es.yml").contains("usage:"));

@@ -1,5 +1,8 @@
 param(
-   [string[]]$MinecraftVersions = @('1.21.11', '26.1.1', '26.1.2', '26.2', '26.3'),
+   [string[]]$MinecraftVersions = @(
+      '1.21.3', '1.21.4', '1.21.5', '1.21.6', '1.21.7', '1.21.8',
+      '1.21.9', '1.21.10', '1.21.11', '26.1.1', '26.1.2', '26.2', '26.3'
+   ),
    [int]$StartupTimeoutSeconds = 180
 )
 
@@ -104,6 +107,14 @@ $results = foreach ($version in $MinecraftVersions) {
       }
    }
 
+   if ($started -and $pluginEnabled -and $null -eq $failure) {
+      $process.StandardInput.WriteLine('stringduper status')
+      $process.StandardInput.WriteLine('stringduper sounds')
+      $process.StandardInput.WriteLine('stringduper reload')
+      $process.StandardInput.Flush()
+      Start-Sleep -Seconds 2
+   }
+
    if (-not $process.HasExited) {
       $process.StandardInput.WriteLine('stop')
       $process.StandardInput.Flush()
@@ -121,6 +132,14 @@ $results = foreach ($version in $MinecraftVersions) {
    if (-not $pluginEnabled -and $null -eq $failure) {
       $failure = 'String Duper Fix did not report a successful enable'
    }
+   $commandsPassed = (
+      $console -match 'String duper:.*enabled' -and
+      $console -match 'personal sound command can only be used by a player' -and
+      $console -match 'Configuration, languages, and sounds were reloaded\.'
+   )
+   if (-not $commandsPassed -and $null -eq $failure) {
+      $failure = 'Status, personal sound guard, or reload command did not complete successfully'
+   }
 
    [pscustomobject]@{
       Minecraft = $version
@@ -128,6 +147,7 @@ $results = foreach ($version in $MinecraftVersions) {
       Channel = $build.channel
       ServerStarted = $started
       PluginEnabled = $pluginEnabled
+      CommandsPassed = $commandsPassed
       Result = if ($null -eq $failure) { 'PASS' } else { "FAIL: $failure" }
    }
 }
