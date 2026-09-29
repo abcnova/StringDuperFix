@@ -1,11 +1,15 @@
 # String Duper Fix 1.0.0 compatibility matrix
 
 Mojang fixed native tripwire string duplication in Java Edition 1.21.2 under
-MC-59471. Paper did not publish a 1.21.2 server build, so the plugin's supported
-Paper range begins with 1.21.3.
+MC-59471. Paper did not publish a 1.21.2 server build, so direct official Paper
+boot tests begin with 1.21.3.
 
-The same Java 21 release JAR was compiled against Paper API 1.21.3 and tested on
-every published Paper release from 1.21.3 through 26.3. Each test downloaded the
+The same Java 21 release JAR was compiled against Paper API 1.21.1, the newest
+available Paper API below Minecraft 1.21.2. This avoids dependencies on later
+API additions and provides binary compatibility for 1.21.2-compatible forks.
+Because there is no official Paper 1.21.2 server JAR, that line cannot be
+truthfully reported as boot-tested. The JAR was tested on every published Paper
+release from 1.21.3 through 26.3. Each test downloaded the
 latest official Paper server JAR, verified its SHA-256 checksum, started a clean
 server, verified the plugin's successful enable message, exercised the admin
 status, personal-sound console guard, and safe reload paths, checked for plugin

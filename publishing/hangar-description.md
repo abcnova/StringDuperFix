@@ -26,9 +26,9 @@
 Personal sound on/off commands are available to every player. Mechanic controls,
 reload, and both status commands require `stringduper.admin` (OP by default).
 
-The same JAR supports every published Paper release from 1.21.3 through 26.3
-and was boot-tested against every listed official Paper server line. Mojang
-fixed native tripwire string duplication in Java 1.21.2; Paper's first release
-after that fix is 1.21.3.
+The same JAR supports Minecraft 1.21.2 through 26.3 on Paper-compatible servers.
+It is compiled against Paper API 1.21.1 for 1.21.2-compatible forks. Mojang fixed
+native tripwire string duplication in Java 1.21.2, but Paper skipped that server
+line; direct official Paper boot tests therefore start with 1.21.3.
 
 Open source under the MIT License.

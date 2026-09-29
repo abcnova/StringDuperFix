@@ -4,10 +4,10 @@
 
 # String Duper Fix
 
-String Duper Fix restores controlled, vanilla-style tripwire string farms on
-Paper and compatible forks from 1.21.3 through 26.3. Mojang fixed the native
-tripwire string duplication bug in Java 1.21.2; Paper's first release after
-that fix is 1.21.3. The plugin is server-side,
+String Duper Fix restores controlled, vanilla-style tripwire string farms from
+Minecraft 1.21.2 through 26.3 on Paper and compatible forks. Mojang fixed the
+native tripwire string duplication bug in Java 1.21.2. Paper skipped 1.21.2 and
+first published a post-fix server for 1.21.3. The plugin is server-side,
 dependency-free, and event-driven:
 there is no permanent world or chunk scan.
 
@@ -51,8 +51,9 @@ farm and only tracks validated hook-to-hook lines in already loaded chunks.
 
 ## Compatibility
 
-The same release JAR was compiled against the oldest supported API and boot-tested
-on each currently published Paper line:
+The same release JAR was compiled against Paper API 1.21.1 so it does not depend
+on API additions after Minecraft 1.21.2. Paper never published a 1.21.2 server
+JAR, so direct official Paper boot tests begin with 1.21.3:
 
 | Minecraft / Paper | Tested build | Required server Java |
 | --- | --- | --- |
@@ -70,9 +71,9 @@ on each currently published Paper line:
 | 26.2 | 129 (stable) | Java 25+ |
 | 26.3 | 133 (alpha) | Java 25+ |
 
-Paper does not publish a separate 26.1 server line. Compatible Paper forks such
-as Leaf are supported where they preserve the public Paper API; fork-specific
-behavior should still be tested by the server owner.
+Paper does not publish separate 1.21.2 or 26.1 server lines. Minecraft 1.21.2
+forks are binary-compatible where they preserve the Paper 1.21.1 API. Compatible
+Paper forks such as Leaf should still be tested by the server owner.
 
 ## Build
 

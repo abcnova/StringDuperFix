@@ -18,7 +18,7 @@ Use this map for the initial public listings. Do not submit a project until all 
 - **Release:** https://github.com/abcnova/StringDuperFix/releases/tag/v1.0.0
 - **Icon:** `assets/StringDuper.png` (1254 × 1254 PNG)
 - **JAR:** `target/StringDuperFix-1.0.0.jar`
-- **JAR SHA-256:** `81ED4639321F69FB197EA9E479630EA52743B2996F6A83FD72450D6A3D1BDC86`
+- **JAR SHA-256:** `03C8DA645FC0E76F037EC784A50F6B893CCBBD5F5063B97AC8260681CE414174`
 - **Release type / channel:** Release
 - **Dependencies:** None
 - **Monetization / rewards:** Leave disabled unless the owner chooses otherwise.
@@ -27,6 +27,7 @@ Use this map for the initial public listings. Do not submit a project until all 
 
 Select Paper and these Minecraft versions:
 
+- 1.21.2
 - 1.21.3
 - 1.21.4
 - 1.21.5
@@ -41,7 +42,7 @@ Select Paper and these Minecraft versions:
 - 26.2
 - 26.3
 
-Do not select 1.21.2 or a standalone 26.1 entry: Paper publishes neither server line. Mojang fixed native string duplication in 1.21.2, and Paper's first post-fix release is 1.21.3. One JAR supports every version above. Java 21+ is required on 1.21.3–1.21.11; the 26.x server lines require Java 25+.
+Select 1.21.2 for compatible forks, while stating clearly that Paper itself did not publish that server line. Do not select a standalone 26.1 entry because Paper did not publish it. Mojang fixed native string duplication in 1.21.2, and Paper's first post-fix release is 1.21.3. One JAR supports every version above. Java 21+ is required on 1.21.2–1.21.11; the 26.x server lines require Java 25+.
 
 Compatible Paper forks may be described in text, but do not tag a loader/platform that was not actually tested.
 

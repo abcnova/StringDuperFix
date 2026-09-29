@@ -27,13 +27,13 @@ Legacy aliases `/tripwirerevival` and `/twrevival` are included.
 
 ## Compatibility
 
-- One JAR for every published Paper release from 1.21.3 through 26.3
+- Minecraft 1.21.2 through 26.3 with one JAR
 - Compatible Paper forks such as Leaf where they preserve the public Paper API
 - Java 21+ on 1.21.3–1.21.11; Java 25+ on 26.x
 - Server-side only
 - No dependencies
 
-Mojang fixed native tripwire string duplication in Java 1.21.2. Paper did not publish 1.21.2, so support starts with Paper 1.21.3. Every listed Paper release was boot-tested with its official server JAR. Paper does not publish a separate 26.1 server line.
+Mojang fixed native tripwire string duplication in Java 1.21.2. The JAR is compiled against Paper API 1.21.1 for 1.21.2-compatible forks. Paper did not publish a 1.21.2 server JAR, so direct official Paper boot tests start with 1.21.3. Every published Paper release from 1.21.3 onward was boot-tested. Paper does not publish a separate 26.1 server line.
 
 Some Paper/Leaf unsupported-mechanics settings require one additional full server restart after the first installation. Configuration files include detailed English comments and safe bounded defaults.
 
