@@ -16,7 +16,7 @@ Use this map for the initial public listings. Do not submit a project until all 
 - **Source:** https://github.com/abcnova/StringDuperFix
 - **Issues:** https://github.com/abcnova/StringDuperFix/issues
 - **Release:** https://github.com/abcnova/StringDuperFix/releases/tag/v1.0.0
-- **Icon:** `assets/StringDuper.png` (1254 × 1254 PNG)
+- **Icon:** `assets/StringDuper.png` (transparent PNG, 1024 x 1024)
 - **JAR:** `target/StringDuperFix-1.0.0.jar`
 - **JAR SHA-256:** `03C8DA645FC0E76F037EC784A50F6B893CCBBD5F5063B97AC8260681CE414174`
 - **Release type / channel:** Release
